@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class AppTest
     extends TestCase
 {
     /**
@@ -33,6 +33,8 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        CrazyLogger crazyLogger = new CrazyLogger();
+        crazyLogger.putEvent("Event 1");
+        assertTrue( crazyLogger.toString().contains("Event 1") );
     }
 }

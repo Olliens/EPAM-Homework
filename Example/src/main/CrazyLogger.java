@@ -3,7 +3,6 @@ package main;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
 public class CrazyLogger {
 
     private StringBuilder log;
@@ -16,7 +15,9 @@ public class CrazyLogger {
 
     public void putEvent(String event) {
         log.append(dateFormater.format(new Date()) + " - " + event + "\n");
-        //System.out.println(log);
+    }
+    public String toString() {
+        return log.toString();
     }
 
     public void view() {
